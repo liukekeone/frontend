@@ -10,11 +10,17 @@ const requestAuth = (req: NextApiRequest) => {
     }
 
     if (!token || !tokens?.length) {
-        return sendResponse({ status: "fail", message: "No authorization token provided" });
+        return sendResponse({
+            status: "fail",
+            message: "No authorization token provided-请在左下角设置中输入请求token！",
+        });
     }
 
     if (!tokens.includes(token)) {
-        return sendResponse({ status: "fail", message: "Invalid authorization token" });
+        return sendResponse({
+            status: "fail",
+            message: "Invalid authorization token-请输入正确的访问token！",
+        });
     }
 };
 
