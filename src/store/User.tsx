@@ -16,9 +16,9 @@ export const UserStore = createContext<userStoreInterface>({} as userStoreInterf
 const User: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [userInfo, setUserInfo] = useState({
         avatar: "/author.jpg",
-        name: "helianthuswhite",
+        name: "LxTree",
         description:
-            'Star on <a href="https://github.com/helianthuswhite/chatgpt-web-next" class="color-[#3050fb]" target="_blank" >Github</a>',
+            'chatGPT-3.5模型',
     });
     return <UserStore.Provider value={{ userInfo, setUserInfo }}>{children}</UserStore.Provider>;
 };
